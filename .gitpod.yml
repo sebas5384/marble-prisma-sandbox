@@ -1,20 +1,18 @@
 
-image: gitpod/workspace-mongodb
+image: gitpod/workspace-postgres
 
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
     onOpen: open-preview
+  - port: 5432
+    onOpen: ignore
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - command: |
-      mongod
   - init: |
       npm install
       npm run build
-    command: |
-      npm run start
 
 vscode:
   extensions:
