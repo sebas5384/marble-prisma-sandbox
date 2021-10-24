@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/sebas5384/marble-prisma-sandbox#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
     "concurrently": "^6.3.0",
     "eslint": "^8.0.1",
     "jest": "^27.3.1",
