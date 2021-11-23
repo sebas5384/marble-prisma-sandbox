@@ -1,6 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 async function main() {
   // await prisma.user.create({
@@ -23,14 +23,14 @@ async function main() {
       posts: true,
       profile: true
     }
-  })
-  console.log(JSON.stringify(allUsers))
+  });
+  console.log(JSON.stringify(allUsers));
 }
 
 main()
   .catch((e) => {
-    throw e
+    throw e;
   })
   .finally(async () => {
-    await prisma.$disconnect()
-  })
+    await prisma.$disconnect();
+  });

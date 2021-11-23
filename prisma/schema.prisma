@@ -19,6 +19,7 @@ model Post {
   published Boolean  @default(false)
   author    User     @relation(fields: [authorId], references: [id])
   authorId  Int
+  branding  Boolean  @default(false)
 }
 
 model Profile {
@@ -32,9 +33,9 @@ model User {
   id      Int       @id @default(autoincrement())
   email   String    @unique
   name    String?
-  posts   Post[]
   profile Profile?
   Comment Comment[]
+  Post    Post[]
 }
 
 model Comment {
